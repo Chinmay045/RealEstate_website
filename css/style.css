@@ -61,6 +61,18 @@ h3 {
     width: 90%;
 }
 
+.button {
+    background-color: var(--primary);
+    padding: var(--padding);
+    color: var(--light);
+    border: 1px solid var(--primary);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+
+}
+
 .header {
     padding: var(--padding);
     background-color: var(--dark);
@@ -138,4 +150,9 @@ h3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.button:hover {
+    background-color: var(--light);
+    color: var(--primary);
 }
