@@ -23,9 +23,6 @@ body {
     font-family: var(--mainfont);
 }
 
-.site-name .logo {
-    background-color: blue;
-}
 
 img {
     max-width: 100%;
@@ -62,4 +59,51 @@ h3 {
     max-width: 1100px;
     margin: 0 auto;
     width: 90%;
+}
+
+.header {
+    padding: var(--padding);
+    background-color: var(--dark);
+}
+
+.header .topbar {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 2rem;
+}
+
+
+.header .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    color: var(--light);
+    grid-row-gap: 1rem;
+}
+
+@media (min-width:768px) {
+
+    .header .topbar {
+
+        grid-template-rows: unset;
+        grid-row-gap: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header .site-name {
+        grid-column: 1/2;
+    }
+
+    .header .menu {
+        grid-column: 2 / 3;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        align-items: center;
+    }
+}
+
+
+
+.header .menu a {
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
 }
