@@ -133,3 +133,19 @@ h3 {
     -moz-appearance: none;
     appearance: none;
 }
+
+.button {
+    background-color: var(--primary);
+    padding: var(--padding);
+    color: white;
+    border: 1px solid var(--primary);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--light);
+    color: var(--primary);
+    cursor: pointer;
+}
